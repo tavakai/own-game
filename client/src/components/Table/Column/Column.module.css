@@ -1,0 +1,19 @@
+.column {
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+.point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6df7f;
+  border-right: 1px solid #f6df7f;
+  font-weight: 900;
+  /* cursor: pointer; */
+  font-size: 26px;
+  background: transparent!important;
+}
+.point:hover {
+  background: rgb(92,174,222)!important;
+  background: radial-gradient(circle, rgba(92,174,222,1) 33%, rgba(68,95,197,1) 98%)!important;
+}

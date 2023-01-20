@@ -1,0 +1,24 @@
+.row {
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-template-areas: 
+    ". . . . . .";
+
+  line-height: 5;
+  border-top: 1px solid #f6df7f;
+  border-bottom: 1px solid #f6df7f;
+}
+.firstColumn {
+  display: flex;
+  justify-content: center;
+  border-right-color: #f6df7f;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+.category {
+  color: #f6df7f;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 24px;
+}

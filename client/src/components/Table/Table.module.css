@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(18,9,169);
+  background: radial-gradient(circle, rgba(18,9,169,1) 33%, rgba(4,4,80,1) 98%);
+  box-sizing: border-box;
+}
+.container:last-child {
+  border-bottom: none;
+}
