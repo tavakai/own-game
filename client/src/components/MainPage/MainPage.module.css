@@ -1,0 +1,17 @@
+
+.container {
+    font-size:40px;
+    text-align: center;
+    height:920px;
+    background-color:darkblue;
+    color:yellow;
+}
+
+.button{
+    height: 100px;
+    width: 100%;
+    background-color:darkblue;
+    color:yellow;
+    border-radius:60px;
+    border:5px solid black;
+}
