@@ -51,4 +51,13 @@ router.post('/check', (req, res) => {
   return res.sendStatus(401);
 });
 
+router.patch('/edit/:id',async(req,res)=>{
+  const {id} = req.params
+  const {points} = req.body
+  await Party.update ({points},{where:{id}})
+  res.sendStatus(200)
+  })
+
+
+
 module.exports = router;

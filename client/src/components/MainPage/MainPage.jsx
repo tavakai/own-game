@@ -25,6 +25,6 @@ value.name ?(
     <button className={style.button} type="button">Начать играть</button>
   </div>
   </div>
-):(<div></div>)
+):(<div className={style.container}>Войдите в свой аккаунт, чтобы начать игру</div>)
   )
 }
