@@ -12,10 +12,10 @@ code {
     monospace;
 }
 
-@font-face {
+/* @font-face {
   font-family: PT Sans Narrow;
   src: url(fonts/PTSansNarrow-Regular);
-}
+} */
 
 * {
   font-family: 'PT Sans Narrow', sans-serif;;
