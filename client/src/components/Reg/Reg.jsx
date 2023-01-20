@@ -1,12 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { regHandler } from '../../redux/reducers/users/userSlice';
 
 export default function Reg() {
   const dispatch = useDispatch();
-
+const navigate = useNavigate()
   return (
-    <form onSubmit={(e) => dispatch(regHandler(e))} className="loginPage">
+    <form onSubmit={(e) => {dispatch(regHandler(e));;navigate('/')}} className="loginPage">
       <div className="form">
         <h1 className="form__title">Регистрация</h1>
 

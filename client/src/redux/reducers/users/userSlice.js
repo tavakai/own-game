@@ -16,15 +16,14 @@ export const { setUser, logout } = userSlice.actions;
 
 export const regHandler = (e) => (dispatch) => {
   e.preventDefault();
-  axios.post('http://localhost:3001/user/signup', Object.fromEntries(new FormData(e.target))).then((resp) => {
-    dispatch(setUser(resp.data));
+  axios.post('http://localhost:3001/user/signup', Object.fromEntries(new FormData(e.target))).then((res) => {
+    dispatch(setUser(res.data));
   }).catch(console.log);
 };
 
-export const handleLogin = (e, inputs) => (dispatch) => {
-  console.log(userSlice.actions);
+export const handleLogin = (e) => (dispatch) => {
   e.preventDefault();
-  axios.post('http://localhost:3001/user/login', inputs).then((res) => {
+  axios.post('http://localhost:3001/user/login',Object.fromEntries(new FormData(e.target))).then((res) => {
     dispatch(setUser(res.data.user));
   }).catch(console.log);
 };

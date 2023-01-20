@@ -1,15 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { handleLogin } from '../../redux/reducers/users/userSlice';
 
-export default function Auth() {
+export default function Login() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const login = (e) => {dispatch(handleLogin(e));navigate('/')}
   return (
     <form
-      onSubmit={(e) => {
-        console.log(e, Object.fromEntries(new FormData(e.target)));
-        dispatch(handleLogin(e, Object.fromEntries(new FormData(e.target))));
-      }}
+      onSubmit={(e) => login(e)}
       className="loginPage"
     >
       <div className="form">
@@ -22,7 +22,7 @@ export default function Auth() {
         </div>
 
         <div className="form__group">
-          <input name="pass" type="pass" className="form__input" placeholder=" " />
+          <input name="pass" type="password" className="form__input" placeholder=" " />
           <label className="form__label">Password</label>
         </div>
 
